@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Application</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: rgb(76,175,80);
+            padding: 20px;
+
+        }
+        .navbar>a{
+            text-decoration: none;
+            color: aliceblue;
+
+        }
+
+        .landing-page{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+        .task-container{
+            display: flex;
+            justify-content: space-between;
+            height: 50vh;
+            width: 70%;
+            color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.505);
+            margin-top: 10%;
+
+        }
+        .tasks-create{
+            width : 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: 10%;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .tasks-create input,select,option,button{
+            width: max-content;
+            text-align: center;
+            height: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            border-color: grey;
+        }
+        .tasks-create>button{
+            background-color: rgb(76,175,80);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .tasks-table{
+            width: 65%;
+        }
+
+        table{
+            width: 75%;
+            /* box-shadow: ; */
+            padding: 10px;
+            text-align: center;
+        }
+        table>td{
+            width: 150px;
+            height: 50px;
+        }
+
+        .table-head{
+            background-color: rgb(76,175,80);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p>Masai-Task-Manager</p>
+        <a href="index.html">Home</a>
+        <a href="deletedTask.html">Deleted Tasks</a>
+    </div>
+    <div class="landing-page">
+        <div class="task-container">
+            <div class="tasks-create">
+                <input class="task-name" type="text" placeholder="Enter Your Task">
+                <select class="priorities" name="priority" id="priority">
+                    <option class="priorities" value="High">High</option>
+                    <option class="priorities" value="Low">Low</option>
+                    <option class="priorities" value="Medium">Medium</option>
+                </select>
+                <button class="create-task" type="submit">Create Task</button>
+            </div>
+            <div class="tasks-table">
+                <table>
+                    <tr class="table-head">
+                        <td class="name">Name</td>
+                        <td class="priority">Priority</td>
+                        <td class="status">Status</td>
+                        <td class="remove">Remove</td>
+                    </td>
+                </table>
+    
+            </div>
+    
+        </div>
+    </div>
+
+</body>
+<script>
+    let task_name = document.querySelector(".task-name");
+    let priorities = document.querySelector(".priorities");
+    let create_task = document.querySelector(".create-task");
+
+    create_task.addEventListener("click",()=>{
+
+        
+
+    });
+    // console.log(task_name);
+    // console.log(priorities)
+    // console.log(create_task);
+</script>
+</html>
